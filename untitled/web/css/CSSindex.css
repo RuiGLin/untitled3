@@ -1,0 +1,406 @@
+*{margin: 0px;
+    padding: 0px;
+}
+video{
+    width:100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;}
+nav{position: relative;
+}
+nav ul{
+    width: 100%;
+
+    /* float: left; */
+    /* position:fixed */
+}
+nav ul li{
+    width: 33%;
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+nav ul li:first-child a{
+    text-decoration: none;
+    color: #FFFFFF;
+    position:fixed;
+}
+nav ul li:nth-child(2){
+    background: url(../img/juxin1.png) no-repeat center -58px;
+}
+nav li:first-child,nav li:nth-child(3){
+    margin-top: 20px;
+}
+nav li:nth-child(3){
+    position: fixed;
+    margin-left: 68%;
+
+}
+#test{
+    right: 40px;
+    bottom: 20px;
+    position: fixed;
+    border-radius:50px;
+    /* box-shadow:0px 3px 2px rgba(0,0,0,0.2);
+     text-shadow:0px 1px 1px rgba(0,0,0,0.3); */
+    color:#000000;
+    border:0.2px solid #2299ff;
+    background-repeat:repeat;
+    background-size:auto;
+    background-origin:padding-box;
+    background-clip:padding-box;
+    background-color:#3399ff;
+    background: linear-gradient(to bottom, #ECE8B9,#ADEED6);
+
+}
+.caidan{
+    display: none;
+    position: absolute;
+    min-width:108%;
+}
+.caidan a{
+    text-decoration: none;
+    color: #FFFFFF;
+    display: block;
+    padding:8px 10px;
+    font-family: "微软雅黑";
+    /* text-align: left; */
+}
+.caidan a:hover{
+    color: #89CE65;
+    font-size:large}
+nav li:nth-child(3):hover .caidan{
+    display: block;}
+#shou{
+
+    position: absolute;
+    left:-520px;
+    top:250px;
+    /* opacity:0; */
+    transition:all 0.5s ease-in 0s;
+}
+body:hover #shou{
+    position: absolute;
+    left:-25px;
+    top:250px;
+    opacity:1;
+}
+#biaoti{
+    text-align: center;
+    padding-top: 190px;
+    box-sizing: border-box;
+}
+#biaoti ul{
+    line-height: 36px;
+    color: #FFFFFF;
+}
+#biaoti ul li:first-child{
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;}
+#biaoti ul a{
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 3px;
+
+}
+#biaoti ul a:hover{
+    font-size: 22px;
+    color:#89CE65;
+}
+#biaoti ul p{
+    margin-top: 55px;
+}
+/* ------------------------------ */
+header{
+    background-image: url(../img/beijin.jpg) ;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: 100% 140%;
+    overflow: hidden;
+}
+/* ----------------------------------- */
+#one{
+    padding: 14% 16%;
+    box-sizing: border-box;
+    background: #D5E7DB;
+    height: 800px;}
+@font-face {
+    font-family:ziti;
+    src: url(../font/fztys.ttf);
+}
+#zuoyi{float: left;
+    clear: none;
+    width: 48%;
+}
+#zuoyi p:first-child{
+    font-family: ziti;
+    color: #53A489;
+    font-size: 68px;
+    letter-spacing: 15px;
+}
+#zuoyi p:nth-child(2){
+    color: #2E8B57;
+    letter-spacing: 3px;}
+#zuoyi ul{
+    width: 100%;
+    padding-top: 15px;
+}
+#zuoyi li{
+    width: 28%;
+    height: 338px;
+    background: url(../img/juxin3.png) center center no-repeat;
+    text-align: center;
+    padding-top: 20px;
+    float: left;
+    list-style: none;
+    margin-right: 2%;
+}
+#zuoyi li a{
+    writing-mode: tb;
+    margin-left: 25%;
+    font-size: 28px;
+    color: #FFFFFF;
+    margin-top: 8px;
+}
+#youyi {
+    float: left;
+    clear: none;
+    width: 10%;
+    height: 480px;
+    margin-top: 10px;
+}
+#youyi ul li{list-style: none;
+    width: 100%;
+    margin-bottom: 30px}
+#youyi ul li:first-child:hover{
+
+}
+#youyi ul li:first-child,#youyi li:nth-child(2 + 3){
+    float: left;
+    clear: none;
+}
+/* ------------------------------------------轮播图 */
+#lunbo{
+    width: 31.7%;
+    height: 390px;
+    border-radius: 5%;
+    background: #FFFFFF;
+    float: right;
+    margin-right: 25px;
+    border: solid 15px #FFFFFF;
+    overflow: hidden;
+    box-shadow: 1px 0px 20px 2px rgba(0,0,0,0.1);
+}
+#lunbo ul {
+    width: calc(100% * 4);
+    animation-name: am;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+#lunbo ul li {
+    width: calc(100% / 4);
+    height: 500px;
+    float: left;
+    list-style: none;
+}
+#lunbo ul li:nth-child(1){
+
+    background-image: url(../img/Clip1.png);
+    background-repeat:no-repeat
+}
+#lunbo ul li:nth-child(2){
+
+    background-image: url(../img/Clip2.png);
+    background-repeat:no-repeat
+}
+#lunbo ul li:nth-child(3){
+
+    background-image: url(../img/Clip3.png);
+    background-repeat:no-repeat
+}
+@keyframes am {
+    0%, 33% {margin-left: 0;}
+    40%, 64% {margin-left: calc(100% * -1);}
+    70%, 100% {margin-left: calc(200% * -1);}
+}
+/* --------------------------------------- */
+#lunbo h2{
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 300px 30px 10px;
+}
+#lunbo li p{
+    color: #FFFFFF;
+    font-size: 15px;
+    margin: 0px 30px;
+}
+/* ----------------------------------------22222 */
+#two{
+    padding: 6% 16%;
+    box-sizing: border-box;
+    background: #C6E0D6;
+    height: 800px;
+}
+#two p:first-child{
+    color: #FFFFFF;
+    font-family: ziti;
+    font-size: 72px;
+}
+#two p:nth-child(2){
+    margin-top: 8px;
+    color: #81C0AB;
+    font-family: ziti;
+    font-size: 30px;
+}
+/* ----------------------------------------- */
+#video{
+    width: 100%;
+    height: 420px;
+    border: solid 1px red;
+}
+/* ----------------------------------------- */
+#more {
+    text-align: center;
+    border-radius: 20px;
+    width: 18%;
+    height: 30px;
+    background-image: linear-gradient(to right,#ECE8B9,#ADEED6);
+    float: right;
+    clear: none;
+    margin-top: 20px;}
+#more span a{color: #2E8B57;
+    line-height: 30px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+/* ------------------------------------------333333 */
+#three{
+    padding: 0% 9%;
+    box-sizing: border-box;background: #D5E7DB;
+    overflow: hidden;
+    height: 800px;}
+#zuoer{
+    position:relative;
+    width: 50%;
+    height: 800px;
+    float: left;
+    clear: none;
+}
+#zuoer h1 img{
+    width: 100%;
+    height: 100%;
+}
+/* --------头部小圆点--------- */
+#zuoer #radio1{
+    position:absolute;
+    margin-top:-120%;
+    margin-left:47.5%;
+
+    width: 37px;
+    height: 35px;
+    float: left;
+    clear: none;
+    overflow: hidden;
+    background-image: url(../img/Redradio.png);
+    background-repeat:no-repeat
+}
+#zuoer #radio1 p{
+    display: none;
+    color: red;
+    /* margin-left: -200px;
+    margin-top: -20px; */
+}
+#zuoer #radio1:hover  p{
+    display: block;
+}
+/* --------腹部小圆点-------- */
+#zuoer #radio2{
+    position:absolute;
+    margin-top:-75%;
+    margin-left:48%;
+
+    width: 37px;
+    height: 35px;
+    float: left;
+    background: url(../img/Redradio.png);
+    background-repeat:no-repeat
+}
+#zuoer #radio2 p{
+    display: none;
+    color: red;
+    /* margin-left: 200px; */
+}
+#zuoer #radio2:hover  p{
+    display: block;
+}
+/* ---------手臂小圆点--------- */
+#zuoer #radio3{
+    position:absolute;
+    margin-top:-75%;
+    margin-left:26%;
+    width: 37px;
+    height: 35px;
+    float: left;
+    background: url(../img/Redradio.png);
+    background-repeat:no-repeat
+}
+#zuoer #radio3 p{
+    display: none;
+    color: red;
+    /* margin-left: 200px; */
+}
+#zuoer #radio3:hover  p{
+    display: block;
+}
+/* ---------小腿小圆点--------------- */
+#zuoer #radio4{
+    position:absolute;
+    margin-top:-25%;
+    margin-left:38.5%;
+
+    width: 37px;
+    height: 35px;
+    float: left;
+    background: url(../img/Redradio.png);
+    background-repeat:no-repeat
+}
+#zuoer #radio4 p{
+    display: none;
+    color: red;
+    /* margin-left: 200px; */
+}
+#zuoer #radio4:hover  p{
+    display: block;
+}
+/* ----------------- */
+#youer{
+    width: 40%;
+    float: left;
+    clear: none;
+}
+#youer ul{list-style: none;
+    margin-top: 45px;
+}
+#youer ul li{
+    color: #2E8668;
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: 2px;
+}
+#youer p:first-child{
+    color: #53A489;
+    padding-top:230px;
+    font-family: ziti;
+    font-size: 65px;
+    letter-spacing: 8px;
+}
+#youer p:nth-child(2){
+    margin-top: 20px;
+    font-size: 15px;
+    letter-spacing: 6px;
+    width: 68%;
+    height: 20px;
+    background-image: linear-gradient(to right,#ECE8B9,#ADEED6);
+}
